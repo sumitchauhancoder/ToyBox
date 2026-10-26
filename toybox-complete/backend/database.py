@@ -8,7 +8,9 @@ from sqlalchemy.orm import sessionmaker
 
 #cloud production database
 import os
-DATABASE_URL = os.getenv("postgresql://toybox_user:LvrZkgKIMpizYUrKbsdzbO75IZRWD6qZ@dpg-dbffv7tg1s2s73fm15dg-a.oregon-postgres.render.com/toybox_2grl")
+DATABASE_URL = os.getenv(
+    "DATABASE_URL",
+    "postgresql://toybox_user:LvrZkgKIMpizYUrKbsdzbO75IZRWD6qZ@dpg-dbffv7tg1s2s73fm15dg-a.oregon-postgres.render.com/toybox_2grl")
 
 engine = create_engine(
     DATABASE_URL,
